@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.flex {
+    display: flex;
+}
+
+.sp {
+    justify-content: space-between;
+}
+
+/* ------------------------ */
+
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid #000;
+    position: relative;
+}
+
+header {
+    height: 100px;
+    align-items: center;
+    position: relative;
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    top: 100px;
+    z-index: 90;
+    height: 0;
+    transition: .35s;
+}
+header.on::after{height: 150px;}
+/* nav------------------------ */
+
+nav {
+    width: 60%;
+    align-self: flex-end;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+/* a가 인라인 요소라서 padding 설정 안먹어*/
+nav ul li a {
+    display: block;
+}
+
+nav ul li>a {
+    padding: 10px;
+}
+
+/* 메인메뉴 a만 설정 */
+nav ul li.main-menu:hover>a {
+    background: royalblue;
+    color: #fff;
+}
+
+li.main-menu {
+    position: relative;
+    background: #ccc;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    display: none;
+    /* absolute로 변경이 block 요소가 인라인 요소로 변경
+    되어 width가 축소되기때문에 부모의 크기 100% 맞춰주기
+    위해 반드시 width:100% 해준다
+    */
+}
+
+.sub-menu a {
+    padding: 5px;
+}
+
+.sub-menu li:hover a {
+    background: royalblue;
+    color: #fff;
+}
+
+/* slide------------------------ */
+.slide-container {
+    overflow: hidden;
+}
+.slide-wrap{
+    position: relative;
+}
+
+/* contents------------------------ */
+
+
+
+h3 {
+    background: royalblue;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.slide,
+.banner {
+    position: relative;
+}
+
+.slide h2,
+.banner button {
+    font-weight: normal;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 999px;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+}
+
+.contents {
+    height: 200px;
+    border: 1px solid #000;
+}
+
+.notic,
+.gallery,
+.banner {
+    width: 33.333%;
+}
+
+
+/* banner------------------------ */
+.banner img {
+    padding: 5px;
+    width: 380px;
+    margin-left: 10px;
+}
+
+
+/* gallery------------------------ */
+.gallery h3 {
+    margin-left: 10px;
+}
+
+.gallery-list {
+    padding: 20px 10px;
+}
+
+/* notic------------------------ */
+
+.notic ul li a {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.notic ul li a p {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.notic ul li:hover {
+    text-decoration: underline;
+}
+
+/* footer------------------------ */
+footer {
+    height: 100px;
+    align-items: center;
+}
+
+
+/* 팝업------------------------ */
+div.popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+
+}
+
+.popup-inner {
+    padding: 10px;
+    width: 40%;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a.close {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    right: 5px;
+    bottom: 5px;
+}
