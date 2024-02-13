@@ -78,8 +78,10 @@ nav ul li.main-menu:hover>a {
     position: absolute;
     background: #eee;
     width: 100%;
-    display: none;
     z-index: 99;
+    height: 0;
+    transition: all .35s;
+    overflow: hidden;
 }
 
 .sub-menu li a {
