@@ -1,0 +1,291 @@
+  @charset "UTF-8";
+  
+  /* reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --main-color: #4f3597;
+    --sub-color1: #8c72d3;
+    --sub-color2: #beadf0;
+    --background-color: #fff;
+    --text-color: #333;
+  }
+
+  img {
+    vertical-align: top;
+  
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .just-center {
+    justify-content: center;
+  }
+  .just-sb{
+    justify-content: space-between;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+  
+  body {
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+
+  .container {
+    width: 1200px;
+    margin: auto;
+    border: 1px solid #000;
+  }
+  /* ------------------------------------------ */
+  /* header */
+  header {
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  h1 {
+    width: 200px;
+    height: 40px;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  /* nav */
+  nav {
+    width: 60%;
+    text-align: center;
+  }
+
+  li.main-menu {
+    flex: 1;
+    position: relative;
+  }
+
+  li.main-menu>a {
+    padding: 10px;
+    transition: .4s;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  li a.menu4{border-right: none;}
+  li.main-menu:hover >a{background:var(--sub-color1);color:#eee}
+
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: var(--background-color);
+  }
+
+  .sub-menu a {
+    padding: 10px;
+  }
+
+  .sub-menu li:hover a {
+    background-color: var(--sub-color2);;
+    color: #eee
+  }
+
+
+  /*   slide-------------------------------------------*/
+  .slide-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .slide-wraper {
+    width: 300%;
+    height: 100%;
+    position: relative;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px
+  }
+
+  
+  #contents {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+
+  }
+
+  .content {
+    position: relative;
+    width: 33.3333%;
+    height: 100%;
+    justify-content: space-between;
+
+  }
+
+
+  /* tab */
+  .tab-wrap {
+    padding: 10px;
+  }
+
+  .tab-menu a {
+    padding: 5px 20px;
+    background: #eee;
+  }
+
+  .tab-menu li a.on {
+    background: var(--sub-color1);
+    color: #eee
+  }
+
+  .tab-contents {
+    height: calc(100% - 30px);
+    position: relative;
+    border-top: 1px solid #000;
+  }
+
+  .tab {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    border-top: 1px solid var(--sub-color);
+  }
+
+  .tab.on {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+
+  #notice ul {
+  padding-top: 10px;
+  
+  }
+
+  #notice ul li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #notice ul li:hover {
+    background: var(--sub-color2);
+    color: #4f3597;
+  }
+
+  #notice ul li a {
+    padding: 4px;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #gallery ul {
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    background: var(--background-color);
+  }
+  #gallery ul li img{width: 100%;}
+  
+  .banner  ,
+  .shortcut  {padding-top: 10px;
+  padding-bottom: 10px; }
+  .banner a,
+  .shortcut a {
+    width: 100px;
+    background: var(--sub-color2);
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 999px;
+    text-align: center;
+  }
+
+
+  /* footer */
+  footer {
+    width: 100%;
+    height: 100px;
+
+    background: #eee;
+  }
+
+  footer .sns {
+    width: 200px;
+    justify-content: space-around;
+  }
+
+  .copyright {
+  flex:1;
+  text-align: center;
+    font-size: 15px;
+
+    font-weight: 300;
+  }
+
+
+  /* popup */
+  #popup {
+    width: 460px;
+    background: #fff;
+    padding: 50px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #popup h3 {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+  }
+
+  #popup p {
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  #popup button {
+    border: none;
+    background: var(--text-color);
+    color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
