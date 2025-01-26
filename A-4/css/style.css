@@ -251,8 +251,9 @@
   .gallery ul li img {
     width: 100%;
     transition: .4s;
+     opacity: .7;
   }
-
+  .gallery ul li:hover img{opacity: 1;}
   /* banner */
 
 
