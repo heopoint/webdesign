@@ -1,13 +1,15 @@
   // menu
-  $('.main-menu').mouseenter(function () {
+  $('.main-menu').mouseenter(function(){
+    $(this).addClass('on')
+    $('header .container').addClass('on')
     $('.sub-menu').stop().slideDown()
-    $('nav').addClass('on')
   })
-  $('.main-menu').mouseleave(function () {
+  $('.main-menu').mouseleave(function(){
+    $('.main-menu').removeClass('on')
+    $('header .container').removeClass('on')
     $('.sub-menu').stop().slideUp()
-    $('nav').removeClass('on')
   })
-
+  
   // slide
   setInterval(function () {
     $('.slide-wrap').animate({ 'left': '-100%' }, 500, function () {
@@ -32,10 +34,13 @@
   })
 
 
+ 
   // popup
-  $('.modal').click(function () {
-    $('.popup').fadeIn(300)
-  })
-  $('.close').click(function () {
-    $('.popup').fadeOut(100)
-  })
+$('.modal').click(function(){
+  $(this).addClass('on')
+  $('.popupbox').fadeIn(200)
+})
+$('a.close').click(function(){
+  $('.modal').removeClass('on')
+  $('.popupbox').fadeOut(100)
+})

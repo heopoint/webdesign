@@ -43,7 +43,7 @@
   }
 
   body {
-    background: var(--background-color);
+    background: var(--bg-color);
     color: var(--text-color);
   }
 
@@ -52,14 +52,40 @@
     margin: auto;
   }
 
-  /* header----------------------------------- */
-  header {
- 
-    height: 100px;
- 
-    background: var(--main-color);
+  img {
+    vertical-align: top;
   }
 
+  /* header----------------------------------- */
+
+  header {
+
+    height: 100px;
+    background: var(--main-color);
+    color: #eee
+  }
+
+  header .container {
+    position: relative;
+    height: 100%;
+  }
+
+  header .container::before {
+    content: '';
+    width: 1200px;
+    height: 0px;
+    background: var(--sub-color);
+    transition: .4s;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 1;
+
+  }
+
+  header .container.on::before {
+    height: 150px;
+  }
 
   h1 {
     width: 200px;
@@ -67,26 +93,9 @@
   }
 
   nav {
-    width: 60%;
-    position: relative;
+    width: 70%;
+    align-self: flex-end;
     margin-right: 10px;
-    border: 1px solid #fff;
-  }
-
-  nav a {
-    color: #fff
-  }
-
-  .main-menu {
-    flex: 1;
-    position: relative;
-    text-align: center;
-
-  }
-
-  .main-menu>a {
-    padding: 10px;
-
   }
 
   main {
@@ -94,30 +103,48 @@
     border-right: 1px solid var(--main-color);
   }
 
-  .main-menu:hover>a {
+  .main-menu {
+    flex: 1;
+    text-align: center;
+    position: relative;
 
-    color: #fff;
-    background: var(--sub-color);
   }
-  .sub-menu a {
+
+
+  li.main-menu>a {
     padding: 10px;
+    transition: .4s;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
   }
 
+  li a.menu4 {
+    border-right: 1px solid #333;
+  }
+
+  .main-menu:hover>a {
+    background: var(--sub-color);
+    color: #eee;
+  }
 
   .sub-menu {
     position: absolute;
     width: 100%;
-    height: 172.8px;
-    display: none;
     z-index: 9;
-    background: var(--sub-color);
-    border: 1px solid #fff;
+    display: none;
+
   }
 
-  .sub-menu li:hover a {
-    background: var(--bg-color);
-    color: var(--sub-color);
+  .sub-menu a {
+    padding: 7px;
   }
+
+  .sub-menu a:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+  }
+
   /* slide ----------------------------------------*/
   .slide-container {
     width: 100%;
@@ -161,117 +188,95 @@
     margin-bottom: 10px;
   }
 
-  .slide .summary h2 b {
-    color: var(--text-color);
-  }
+
 
   .slide .summary p {
     color: var(--text-color);
     font-size: 20px;
 
   }
-
-  .slide .summary p b {
-    color: var(--main-color);
-  }
-
+ 
   /* ----------------------------------- */
+  /* contents */
   .contents {
     width: 100%;
     height: 200px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-color);
+
+
   }
 
   .content {
-    position: relative;
-    justify-content: space-between;
     width: 33.3333%;
     height: 100%;
+    padding: 15px;
   }
 
-  /* tab */
-  .tab-wrap {
-    padding: 10px;
+  .content h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--main-color);
   }
 
-  .tab-menu a {
-    padding: 5px 20px;
-    background: #eee;
+  .notice,
+  .gallery {
+    border-right: 1px solid var(--main-color);
   }
 
-  .tab-menu li a.on {
-    background: var(--main-color);
-    color: #fff;
-  }
-
-  .tab-contents {
-    height: calc(100% - 30px);
-    position: relative;
-    border-top: 1px solid #000;
-  }
-
-  .tab {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: none;
-    border-top: 1px solid var(--sub-color);
-    background: var(--bg-color);
-  }
-
-  .tab.on {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  #gallery img {
-    width: 100%;
-  }
-
-  #notice ul {
-    padding-top: 10px;
-
-  }
-
-  #notice ul li {
-    cursor: pointer;
+  .notice li {
+    font-size: 15px;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
   }
 
-  #notice ul li:hover {
-    background: var(--sub-color);
-  color: #eee;
-  }
-
-  #notice ul li a {
-    padding: 4px;
+  .notice li a {
     width: 70%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  #gallery ul {
-    width: 100%;
-    height: 100%;
-    gap: 15px;
-    background: var(--background-color);
+  .notice li:hover {
+    border-bottom: 1px solid var(--sub-color)
   }
 
-  .banner,
+  .notice li.on {
+    background: var(--sub-color);
+  }
+
+  /* gallery */
+  .gallery ul {
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+
+  .gallery ul li {
+    width: 32%;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+  .gallery ul li img {
+
+    transition: .4s;
+  }
+
+  /* banner */
+
   .shortcut {
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-
   }
 
-  .banner a,
   .shortcut a {
     width: 100px;
-    background: var(--main-color);
-    color: #fff;
+    background: var(--sub-color);
     padding: 10px;
     position: absolute;
     left: 50%;
@@ -279,6 +284,7 @@
     transform: translate(-50%, -50%);
     border-radius: 999px;
     text-align: center;
+    color: #eee;
   }
 
   /* footer------------------------------- */
@@ -289,15 +295,8 @@
     color: #eee;
   }
 
-  .footer-menu {
-
-    gap: 50px;
-    height: 50px;
-  }
-
-
   .copyright {
-
+    flex: 1;
     font-size: 14px;
     height: 50px;
   }
@@ -307,36 +306,60 @@
   }
 
 
+  .sns {
+    height: 50px;
+    gap: 10px
+  }
+
+  .sns img {
+    height: 40px;
+
+    border-radius: 50%;
+  }
+
+  .familysite {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
   /* popup */
+  .popupbox {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .popup {
-    width: 540px;
+    width: 500px;
+    background: var(--bg-color);
     padding: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    border: 1px solid var(--main-color);
-    display: none;
   }
 
-  .popup h4 {
-    font-size: 18px;
-    text-align: center;
+  .popup h3 {
+    padding-bottom: 5px;
+  }
+
+  .popup h5 {
+    font-size: 15px;
+    font-weight: 500;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--main-color)
+    color: #888;
+    border-bottom: 1px solid #000;
   }
 
   .popup p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-
-  .popup p b {
-    color: var(--sub-color);
-    font-size: 15px;
+    padding: 10px 0;
   }
 
   a.close {
