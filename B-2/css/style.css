@@ -114,13 +114,13 @@
   li.main-menu>a {
     padding: 10px;
     transition: .4s;
-    border-top: 1px solid #333;
-    border-left: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
+    border-bottom: 1px solid #555;
   }
 
   li a.menu4 {
-    border-right: 1px solid #333;
+    border-right: 1px solid #555;
   }
 
   .main-menu:hover>a {
