@@ -30,7 +30,7 @@
     align-items: center;
   }
 
-  .just-center {
+  .just-c {
     justify-content: center;
   }
 
@@ -38,12 +38,12 @@
     justify-content: space-between;
   }
 
-  .items-center {
+  .items-c{
     align-items: center;
   }
 
   body {
-    background: var(--background-color);
+    background: var(--bg-color);
     color: var(--text-color);
   }
 
@@ -54,10 +54,8 @@
 
   /* header----------------------------------- */
   header {
- 
-    height: 100px;
- 
-    background: var(--main-color);
+     height: 100px;
+     background: var(--main-color);
   }
 
 
@@ -89,11 +87,6 @@
 
   }
 
-  main {
-    border-left: 1px solid var(--main-color);
-    border-right: 1px solid var(--main-color);
-  }
-
   .main-menu:hover>a {
 
     color: #fff;
@@ -118,9 +111,13 @@
     background: var(--bg-color);
     color: var(--sub-color);
   }
+  main {
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+  }
   /* slide ----------------------------------------*/
   .slide-container {
-    width: 100%;
+ 
     height: 300px;
     border-bottom: 1px solid var(--main-color);
     overflow: hidden;
@@ -134,6 +131,7 @@
 
   .slide {
     width: 100%;
+    max-width: 1200px;
     height: 100%;
     position: relative;
   }
@@ -177,21 +175,18 @@
 
   /* ----------------------------------- */
   .contents {
-    width: 100%;
-    height: 200px;
+      height: 200px;
+    padding: 10px;
   }
 
   .content {
     position: relative;
-    justify-content: space-between;
-    width: 33.3333%;
+ 
+    width: 32.8%;
     height: 100%;
   }
-
+  .content img{width: 100%;}
   /* tab */
-  .tab-wrap {
-    padding: 10px;
-  }
 
   .tab-menu a {
     padding: 5px 20px;
@@ -219,7 +214,7 @@
   }
 
   .tab.on {
-    width: 100%;
+
     height: 100%;
     display: block;
   }
@@ -253,16 +248,15 @@
   }
 
   #gallery ul {
-    width: 100%;
+
     height: 100%;
     gap: 15px;
-    background: var(--background-color);
+    background: var(--bg-color);
   }
 
   .banner,
   .shortcut {
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     position: relative;
 
   }
@@ -283,7 +277,7 @@
 
   /* footer------------------------------- */
   footer {
-    width: 100%;
+
     height: 100px;
     background: var(--main-color);
     color: #eee;

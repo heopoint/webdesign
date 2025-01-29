@@ -9,9 +9,8 @@
 
   :root {
     --main-color: #4f3597;
-
     --sub-color: #beadf0;
-    --background-color: #fff;
+    --bg-color: #fff;
     --text-color: #333;
   }
 
@@ -34,7 +33,7 @@
     display: flex;
   }
 
-  .just-center {
+  .just-c {
     justify-content: center;
   }
 
@@ -42,12 +41,12 @@
     justify-content: space-between;
   }
 
-  .items-center {
+  .items-c {
     align-items: center;
   }
 
   body {
-    background: var(--background-color);
+    background: var(--bg-color);
     color: var(--text-color);
   }
 
@@ -60,9 +59,9 @@
   /* ------------------------------------------ */
   /* header */
   header {
-    width: 100%;
+   
     height: 100px;
-    justify-content: space-between;
+
   }
 
   h1 {
@@ -105,7 +104,7 @@
     position: absolute;
     width: 100%;
     z-index: 10;
-    background: var(--background-color);
+    background: var(--bg-color);
 
   }
 
@@ -132,33 +131,33 @@
   }
 
   .slide {
-    width: 100%;
+ 
     height: 100%;
 
   }
 
 
   #contents {
-    width: 100%;
+   
     height: 200px;
     border-bottom: 1px solid #333;
     border-top: 1px solid #333;
-
+    padding: 10px;
   }
 
   .content {
     position: relative;
-    width: 33.3333%;
+    width: 32.8%;
     height: 100%;
-    justify-content: space-between;
+ 
 
   }
 
+  .content img {
+    width: 100%;
+  }
 
   /* tab */
-  .tab-wrap {
-    padding: 10px;
-  }
 
   .tab-menu a {
     padding: 5px 20px;
@@ -185,7 +184,7 @@
   }
 
   .tab.on {
-    width: 100%;
+ 
     height: 100%;
     display: block;
 
@@ -217,7 +216,7 @@
   }
 
   #gallery ul {
-    width: 100%;
+ 
     height: 100%;
     gap: 15px;
     background: var(--background-color);
@@ -225,12 +224,6 @@
 
   #gallery ul li img {
     width: 100%;
-  }
-
-  .banner,
-  .shortcut {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .banner a,
@@ -249,7 +242,7 @@
 
   /* footer */
   footer {
-    width: 100%;
+   
     height: 100px;
 
     background: #eee;

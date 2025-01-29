@@ -30,7 +30,7 @@
     align-items: center;
   }
 
-  .just-center {
+  .just-c {
     justify-content: center;
   }
 
@@ -38,8 +38,13 @@
     justify-content: space-between;
   }
 
-  .items-center {
+  .items-c{
     align-items: center;
+  }
+
+
+  img {
+    vertical-align: top;
   }
 
   body {
@@ -51,11 +56,6 @@
     width: 1200px;
     margin: auto;
   }
-
-  img {
-    vertical-align: top;
-  }
-
   /* header----------------------------------- */
 
   header {
@@ -203,14 +203,14 @@
     height: 200px;
     justify-content: space-between;
     border-bottom: 1px solid var(--main-color);
-
+    padding: 10px;
 
   }
 
   .content {
-    width: 33.3333%;
+    width: 32.8%;
     height: 100%;
-    padding: 15px;
+ 
   }
 
   .content h3 {
@@ -219,16 +219,12 @@
     color: var(--main-color);
   }
 
-  .notice,
-  .gallery {
-    border-right: 1px solid var(--main-color);
-  }
 
   .notice li {
     font-size: 15px;
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 6px 0;
     cursor: pointer;
   }
 
@@ -261,16 +257,10 @@
     width: 100%;
   }
 
-  .gallery ul li img {
-
-    transition: .4s;
-  }
-
   /* banner */
 
   .shortcut {
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     position: relative;
   }
 
@@ -322,7 +312,8 @@
     line-height: 50px;
     text-align: center;
   }
-
+  select{padding: 7px; outline: none;}
+  
   /* popup */
   .popupbox {
     width: 100%;

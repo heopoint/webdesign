@@ -11,16 +11,24 @@
   })
   
   // slide
-  setInterval(function () {
-    $('.slide-wrap').animate({ 'left': '-100%' }, 500, function () {
+  let slideInterval;
+  function startSlide() {
+    clearInterval(slideInterval); // 기존 interval 정지
+    slideInterval = setInterval(function () {
+      $('.slide-wrap').animate({ 'left': '-100%' }, 500, function () {
 
-      $('.slide').first().appendTo('.slide-wrap')
-      $('.slide-wrap').css({ 'left': '0' })
-
-    })
-
-  }, 3000)
-
+        $('.slide').first().appendTo('.slide-wrap')
+        $('.slide-wrap').css({ 'left': '0' })
+  
+      })
+    }, 3000);
+  }
+  
+  // focus 이벤트와 슬라이드 시작 연결
+  $(window).on('focus', startSlide);
+  
+  // 초기 슬라이드 실행
+  startSlide();
   // tab
   $('.tab-menu li a').click(function (e) {
     e.preventDefault()

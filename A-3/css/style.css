@@ -11,7 +11,7 @@
     --main-color: #385dae;
     --sub-color: #88aae3;
 
-    --background-color: #fff;
+    --bg-color: #fff;
     --text-color: #333;
   }
 
@@ -34,7 +34,7 @@
     display: flex;
   }
 
-  .just-center {
+  .just-c {
     justify-content: center;
   }
 
@@ -42,12 +42,12 @@
     justify-content: space-between;
   }
 
-  .items-center {
+  .items-c {
     align-items: center;
   }
 
   body {
-    background: var(--background-color);
+    background: var(--bg-color);
     color: var(--text-color);
   }
 
@@ -60,14 +60,13 @@
   /* ------------------------------------------ */
   /* header */
   header {
-   
     height: 100px;
-    justify-content: space-between;
+
   }
 
   h1 {
     width: 200px;
-  aspect-ratio: 2/1;
+    aspect-ratio: 2/1;
   }
 
   /* nav */
@@ -105,7 +104,7 @@
     position: absolute;
     width: 100%;
     z-index: 10;
-    background: var(--background-color);
+    background: var(--bg-color);
   }
 
   .sub-menu a {
@@ -141,22 +140,18 @@
     height: 200px;
     border-bottom: 1px solid #333;
     border-top: 1px solid #333;
-
+    padding: 10px;
   }
 
   .content {
     position: relative;
-    width: 33.3333%;
+    width: 32.8%;
     height: 100%;
-    justify-content: space-between;
-
-  }
-
+   }
+   .content img{width: 100%;}
 
   /* tab */
-  .tab-wrap {
-    padding: 10px;
-  }
+ 
 
   .tab-menu a {
     padding: 5px 20px;
@@ -165,7 +160,7 @@
 
   .tab-menu li a.on {
     background: var(--main-color);
-  color: #fff;
+    color: #fff;
   }
 
   .tab-contents {
@@ -202,7 +197,7 @@
 
   #notice ul li:hover {
     background: var(--sub-color);
-  
+
   }
 
   #notice ul li a {
@@ -226,8 +221,7 @@
 
   .banner,
   .shortcut {
-    padding-top: 10px;
-    padding-bottom: 10px;
+ 
     position: relative;
   }
 
@@ -235,7 +229,7 @@
   .shortcut a {
     width: 100px;
     background: var(--main-color);
-    color:#fff;
+    color: #fff;
     padding: 10px;
     position: absolute;
     left: 50%;
@@ -299,7 +293,7 @@
     line-height: 1.3;
     margin-bottom: 20px;
   }
- 
+
   #popup a.close {
     border: none;
     background: var(--main-color);
