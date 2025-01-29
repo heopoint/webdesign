@@ -1,40 +1,48 @@
 // header
- 
-$('.main-menu').mouseenter(function(){
+
+$('.main-menu').mouseenter(function () {
   $(this).addClass('on')
   $('header').addClass('on')
   $('.sub-menu').stop().slideDown()
 })
-$('.main-menu').mouseleave(function(){
+$('.main-menu').mouseleave(function () {
   $('.main-menu').removeClass('on')
   $('header').removeClass('on')
   $('.sub-menu').stop().slideUp()
 })
 
+
 // slide
-  // slide
-  $('.slide').eq(0).siblings().hide()
+$('.slide').eq(0).siblings().hide()
 
-  let idx =0
+let idx = 0
+let slideInterval;
 
-  setInterval(function(){
+function startSlide() {
+  clearInterval(slideInterval); // 기존 interval 정지
+  slideInterval = setInterval(function () {
     idx++
 
-    if(idx === 3){
-      idx=0
+    if (idx === 3) {
+      idx = 0
     }
 
     $('.slide').fadeOut()
     $('.slide').eq(idx).fadeIn()
-    
-  },3000)
 
+  }, 3000);
+}
+
+
+$(window).on('focus', startSlide);// focus 이벤트와 슬라이드 시작 연결
+
+startSlide();// 초기 슬라이드 실행
 
 // popup
-$('.modal').click(function(){
- 
+$('.modal').click(function () {
+
   $('#popup').fadeIn(200)
 })
-$('a.close').click(function(){
-   $('#popup').fadeOut(100)
+$('a.close').click(function () {
+  $('#popup').fadeOut(100)
 })

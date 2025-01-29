@@ -256,15 +256,7 @@
   .gallery ul li:hover img {
     opacity: 1;
   }
-
-  /* banner */
-
-
  
-  .shortcut img {
-    width: 100%;
-  }
-
   .shortcut a {
     width: 100px;
     background: var(--text-color);
