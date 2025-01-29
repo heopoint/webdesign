@@ -47,7 +47,7 @@ body {
 .container {
     width: 1200px;
     margin: auto;
- 
+
 }
  
  
@@ -107,7 +107,7 @@ nav a {
 main {
   width: 1200px ;
   margin: auto;;
-  border-left: 1px solid var(--sun-color);
+  border-left: 1px solid var(--sub-color);
   border-right: 1px solid var(--sub-color);
 }
 /* slide */
@@ -141,6 +141,8 @@ main {
 .contents {
     height: 200px;
     padding: 10px;
+    /* border-left: 1px solid #333;
+    border-right: 1px solid #333; */
 }
 
 .contents .content {
