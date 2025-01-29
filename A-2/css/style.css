@@ -63,8 +63,7 @@
   header {
    
     height: 100px;
- 
-    position: relative;
+     position: relative;
   }
 
   header::before {

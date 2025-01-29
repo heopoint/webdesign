@@ -32,10 +32,8 @@ $(window).on('focus', startSlide);
 startSlide();
 // popup
 $('.modal').click(function(){
-  $(this).addClass('on')
   $('.popupbox').fadeIn(200)
 })
 $('a.close').click(function(){
-  $('.modal').removeClass('on')
   $('.popupbox').fadeOut(100)
 })
