@@ -295,10 +295,10 @@
   select{padding: 7px; outline: none;}
   /* ----------------------------- */
   /* popupbox */
-  .popupbox {
+  .layer-popup {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .5);
     display: none;
     position: absolute;
     top: 50%;

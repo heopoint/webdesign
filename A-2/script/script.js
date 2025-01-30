@@ -32,8 +32,8 @@ $(window).on('focus', startSlide);
 startSlide();
 // popup
 $('.modal').click(function(){
-  $('.popupbox').fadeIn(200)
+  $('.layer-popup').fadeIn(200)
 })
 $('a.close').click(function(){
-  $('.popupbox').fadeOut(100)
+  $('.layer-popup').fadeOut(100)
 })

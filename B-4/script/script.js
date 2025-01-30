@@ -34,8 +34,8 @@
   // pop-up
   $('.modal').click(function () {
 
-    $('.popupbox').fadeIn()
+    $('.layer-popup').fadeIn()
   })
   $('a.close').click(function () {
-    $('.popupbox').fadeOut()
+    $('.layer-popup').fadeOut()
   })
