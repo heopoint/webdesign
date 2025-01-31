@@ -66,9 +66,7 @@ h1 {
   margin-top: 10px;
 }
 
-img {
-  width: 100%;
-}
+
 
 nav {
   width: 90%;
@@ -83,9 +81,7 @@ nav {
   border-bottom: 1px solid var(--main-color);
 }
 
-a.menu4 {
-  border: none
-}
+ 
 
 .main-menu:hover>a {
   background: var(--main-color);
@@ -98,7 +94,7 @@ a.menu4 {
   background: #eee;
   border-bottom: 1px solid var(--main-color);
 }
-.sub-menu:last-child{border:none}
+ 
 .sub-menu a {
   padding: 8px;
   text-align: center;

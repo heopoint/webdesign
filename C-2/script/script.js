@@ -47,10 +47,10 @@
 
   // popup
   $('.modal').click(function () {
-    $(this).addClass('on')
-    $('.popup').fadeIn(300)
+   
+    $('.layer-popup').fadeIn(300)
   })
   $('.close').click(function () {
-    $('.modal').removeClass('on')
-    $('.popup').fadeOut(100)
+   
+    $('.layer-popup').fadeOut(100)
   })
