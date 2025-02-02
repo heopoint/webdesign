@@ -39,7 +39,10 @@ a {
 .items-c {
   align-items: center;
 }
-img{vertical-align: top;}
+
+img {
+  vertical-align: top;
+}
 
 .container {
   width: 1000px;
@@ -69,14 +72,14 @@ nav {
   margin-top: 10px;
 
 }
-
+.main-menu{position: relative;
+z-index: 99;}
+ 
 .main-menu>a {
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid var(--main-color);
 }
-
-
 
 .main-menu:hover>a {
   background: var(--main-color);
@@ -86,8 +89,13 @@ nav {
 
 .sub-menu {
   display: none;
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  left: 100%;
+  top:-10px;
   background: #eee;
-  border-bottom: 1px solid var(--main-color);
+  border: 1px solid var(--main-color);
 }
 
 .sub-menu a {
@@ -96,7 +104,6 @@ nav {
 }
 
 .sub-menu a:hover {
-
   background: var(--sub-color);
 }
 
@@ -171,7 +178,11 @@ main {
   height: 100%;
 
 }
-.content img{width: 100%;}
+
+.content img {
+  width: 100%;
+}
+
 .notice {
   border-top: 1px solid #000;
 }
@@ -216,7 +227,7 @@ main {
   width: 33%;
   height: 100%;
   overflow: hidden;
-  padding-top:10px ;
+  padding-top: 10px;
 }
 
 #gallery li a {
@@ -240,7 +251,7 @@ main {
   text-align: center;
 }
 
- 
+
 
 /* footer */
 footer {
