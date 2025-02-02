@@ -1,9 +1,9 @@
   // menu
   $('.main-menu').mouseenter(function () {
-    $(this).find('.sub-menu').stop().slideDown()
+    $(this).find('.sub-menu').stop().fadeIn()
   })
   $('.main-menu').mouseleave(function () {
-    $(this).find('.sub-menu').stop().slideUp()
+    $(this).find('.sub-menu').stop().fadeOut()
   })
   // -------------------------------------------
  
