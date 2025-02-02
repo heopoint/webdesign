@@ -64,7 +64,7 @@ header {
   border: 1px solid #000;
 
 }
-
+h1 img{aspect-ratio: 2/1;}
 
 nav {
   width: 90%;
@@ -229,7 +229,8 @@ main {
   overflow: hidden;
   padding-top: 10px;
 }
-
+#gallery li img{opacity: .7;transition: .35s;}
+#gallery li:hover img{opacity: 1;}
 #gallery li a {
   height: 100%;
 }
