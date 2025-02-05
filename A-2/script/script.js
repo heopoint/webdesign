@@ -13,8 +13,7 @@ $('.main-menu').mouseleave(function(){
 
  
 function startSlide() {
- 
- setInterval(function () {
+  setInterval(function () {
     $('.slide-wrap').animate({'left':'-100%'},600,function(){
       $('.slide').first().appendTo('.slide-wrap')
       $('.slide-wrap').css({'left':'0%'})
@@ -23,6 +22,7 @@ function startSlide() {
 }
  
 startSlide();
+
 // popup
 $('.modal').click(function(){
   $('.layer-popup').fadeIn(200)

@@ -7,13 +7,17 @@ $('.main-menu').mouseleave(function () {
 })
 
 // slide
-setInterval(function () {
-  $('.slide-wrap').animate({ 'left': '-100%' },600, function () {
-    $('.slide').first().appendTo('.slide-wrap')
-    $('.slide-wrap').css({ 'left': '0' })
-  })
-
-}, 3000)
+  
+function startSlide() {
+  setInterval(function () {
+    $('.slide-wrap').animate({'left':'-100%'},600,function(){
+      $('.slide').first().appendTo('.slide-wrap')
+      $('.slide-wrap').css({'left':'0%'})
+    })
+  }, 3000);
+}
+ 
+startSlide();
 
 // popup
 $('.modal').click(function(){

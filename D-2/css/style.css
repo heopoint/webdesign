@@ -46,18 +46,22 @@ body {
   width: 100%;
   height: calc(400px + 250px);
 }
-
+/* -------------------------------------------------------------- */
 /* header */
 header {
   width: 200px;
   height: 100%;
   border-right: 1px solid var(--main-color);
 }
-h1 img{aspect-ratio: 2/1;}
+
+h1 img {
+  aspect-ratio: 2/1;
+}
+
 main {
   flex: 1
 }
- 
+
 nav {
   width: 90%;
   margin: auto;
@@ -82,14 +86,17 @@ nav {
   border-bottom: 1px solid var(--main-color);
 
 }
-.sub-menu a{padding: 10px}
+
+.sub-menu a {
+  padding: 10px
+}
+
 .sub-menu a:hover {
   background: var(--sub-color);
   color: var(--main-color);
   font-weight: 600;
 }
-
-/* upper */
+ /* -------------------------------------------------------------- */
 .wrap {
   width: 100%;
   height: 400px;
@@ -151,7 +158,7 @@ nav {
   font-size: 22px;
 }
 
-
+/* -------------------------------------------------------------- */
 
 .banner {
   width: 230px;
@@ -165,8 +172,8 @@ nav {
   left: 10%;
   color: #333;
 }
-
-/* lower */
+/* -------------------------------------------------------------- */
+ 
 .contents {
   height: 250px;
   padding: 10px
@@ -257,7 +264,7 @@ nav {
 .gallery ul li img {
   width: 100%;
 }
-
+/* -------------------------------------------------------------- */
 /* footer */
 footer {
   width: 100%;
@@ -283,7 +290,7 @@ select {
   outline: none;
   margin-right: 20px;
 }
-
+/* -------------------------------------------------------------- */
 /* popup */
 .popup-layer {
   width: 100%;
