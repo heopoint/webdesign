@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+:root {
+  --main-color: rgb(8, 92, 189);
+  --sub-color: #039b10;
+  --bg-color: #fff;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+ 
+}
+
+.just-c {
+  justify-content: center;
+}
+
+.just-sb {
+  justify-content: space-between;
+}
+
+.items-c {
+  align-items: center;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  width: 100%;
+
+}
+
+.container {
+  width: 100%;
+  height: calc(400px + 200px + 250px);
+  overflow: hidden;
+}
+/* ------------------------------------------*/
+
+/* header */
+header {
+  width: 200px;
+  height: 100%;
+  background: var(--main-color);
+}
+
+
+
+h1 {
+  padding-top: 10px;
+  width: 200px;
+}
+
+h1 img {
+  width: 100%;
+}
+
+nav {
+  width: 180px;
+  margin: 50px auto;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+nav::before {
+  content: '';
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 179px;
+  background: var(--main-color);
+  transition: .4s;
+}
+
+nav.on::before {
+  width:2000px
+}
+
+.main-menu {
+  position: relative;
+}
+
+.main-menu>a {
+  border: 1px solid #eee;
+}
+
+.main-menu a {
+  padding: 14px 30px;
+  color: #fff;
+}
+
+.main-menu:hover>a {
+  background: var(--sub-color);
+
+}
+
+.sub-menu {
+  position: absolute;
+  top: 0;
+  left: 220px;
+  width: 800px;
+  z-index: 9;
+  display: none;
+}
+
+.sub-menu li {
+  display: inline-block;
+  width: 140px;
+  position: relative;
+}
+
+
+.sub-menu a {
+
+  color: var(--main-color);
+  padding-left: 20px;
+  color: #fff;
+}
+
+.sub-menu li:hover a {
+  background-color: var(--sub-color);
+  color: #eee;
+}
+
+.spot-menu {
+  justify-content: center;
+  gap: 0 10px;
+
+  color: #fff
+}
+
+.spot-menu li:hover {
+  font-weight: 600;
+}
+
+.spot-menu li:nth-child(1) {
+  padding: 0 10px;
+  border-right: 1px solid #fff
+}
+/* ------------------------------------------*/
+main {
+  position: relative;
+  flex: 1
+}
+
+/* slide */
+.slide-wrap {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: no-repeat center;
+  background-size: cover;
+}
+
+.slide1 {
+  background-image: url(../image/slide1.png);
+}
+
+.slide2 {
+  background-image: url(../image/slide2.png);
+}
+
+.slide3 {
+  background-image: url(../image/slide3.png);
+}
+
+.slide span {
+  width: 100%;
+  text-indent: -99px;
+  overflow: hidden;
+  display: block;
+}
+
+.slide .summary {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.slide .summary h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.slide .summary h2 b {
+  color: var(--main-color);
+}
+
+.slide .summary p {
+  font-size: 20px;
+}
+
+.slide .summary p b {
+  color: var(--sub-color);
+}
+
+/* ------------------------------------------*/
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 200px;
+
+  position: relative;
+  background: #f4f4f2;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.banner .inner {
+  margin: 10px;
+  background: #f4f4f2;
+}
+
+.banner img {
+  height: 180px
+}
+
+.banner .summary {
+  flex: 1;
+  padding: 10px
+}
+
+.banner .summary h3 {
+  font-size: 24px;
+}
+.shortcut {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  border: 1px solid #aaa;
+}
+
+.shortcut li {
+  border-bottom: 1px solid #aaa;
+}
+
+.shortcut li:last-child {
+  border: none
+}
+
+/* ------------------------------------------*/
+/* contents */
+.tab-container {
+  height: 250px;
+  padding: 10px;
+}
+
+.tab-menu {
+  display: inline-flex;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.tab-menu a {
+  padding: 10px 20px;
+  background: #eee;
+}
+
+.tab-menu li.on a {
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.tab-contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.tab {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+}
+
+.notice ul {
+  width: 100%;
+}
+
+.notice li {
+  padding: 5px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #cecece;
+}
+
+.notice li:hover {
+  background: #d9ecf3;
+}
+
+.notice li a {
+  width: 70%;
+}
+
+.gallery {
+  display: none;
+}
+
+.gallery ul {
+  gap: 20px;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.gallery li {
+  width: 30%;
+  height: 100%;
+}
+
+.gallery li a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 이미지를 a 태그 안 정가운데에 위치시키기 위해 이미지에 position: absolute; 함 */
+.gallery li a img {
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ------------------------------------------*/
+
+/* footer */
+footer {
+  height: 120px;
+  border-top: 1px solid var(--main-color);
+}
+
+.footer-menu {
+  height: 60px;
+}
+
+.footer-menu li {
+  border-right: 1px solid #000;
+}
+
+.footer-menu li:nth-last-child(1) {
+  border-right: none;
+}
+
+.footer-menu li a {
+  padding: 0 20px;
+}
+
+.footer-wrap {
+  flex: 1;
+  border-left: 1px solid var(--main-color);
+}
+
+.copyright {
+  font-size: 14px;
+  height: 60px;
+  border-top: 1px solid #aaa;
+
+}
+
+.copyright p {
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+/* ------------------------------------------*/
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 500px;
+  padding: 50px;
+  background: var(--bg-color);
+  border: 1px solid var(--main-color);
+}
+
+.popup h5 {
+  font-size: 18px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.popup p {
+  font-size: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.popup a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+}

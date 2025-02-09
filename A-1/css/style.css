@@ -46,6 +46,10 @@
   }
 
   body {
+    user-select: none; /* 텍스트 선택 불가 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     background: var(--bg-color);
     color: var(--text-color);
   }
