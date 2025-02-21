@@ -33,7 +33,7 @@
 
   .flex {
     display: flex;
-    align-items: center;
+   
   }
   .just-c {
     justify-content: center;
